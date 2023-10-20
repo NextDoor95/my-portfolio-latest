@@ -1,0 +1,80 @@
+@import '../../components/Navbar/navbar';
+@import '../../components/Footer/footer';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+	text-decoration: none;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(22,24,28);
+  background: radial-gradient(circle, rgba(22,24,28,1) 0%, rgba(0,0,0,1) 45%);
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+	color: #e8e8e8;
+}
+
+span {
+	color: rgba(139, 188, 238);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: #1c8440;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #1c8440;
+}
+
+.button {
+	background-color:#212121;
+	padding: 0 12px;
+	color: #e8e8e8;
+	font-family: 'Poppins';
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 30px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	border-radius: 50px;
+	cursor: pointer;
+	text-decoration: none;
+	border-top: 1px solid rgba( 9, 43, 57, 0.6 );
+	border-bottom: 1px solid rgba( 9, 43, 57, 0.6 );
+	box-shadow:
+            inset -6px -6px 16px rgba( 0, 0, 0, 1 ),
+            inset 6px 6px 16px rgba( 9, 43, 57, 0.4 );
+	transition: all 0.2s ease-out;
+	&:hover {
+		background-color: rgb(16, 63, 83);
+	}
+	.bug {
+		padding-left: 8px;
+	}
+}
