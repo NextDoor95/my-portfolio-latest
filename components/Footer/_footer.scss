@@ -6,7 +6,6 @@
 	flex-direction: column;
 	text-align: center;
 	margin-top: 8vh;
-	
 	font-size: 14px;
 
     .top {
@@ -23,7 +22,8 @@
 			flex-direction: column;
 			align-items: center;
 			.logo {
-				margin: 10px 10px;
+				margin: 10px;
+				line-height: 0rem;
 			}
 			p {
 				color: #8e8e8e;
@@ -56,7 +56,7 @@
         }
     }
 	.bottom {
-		border-top: 1px solid rgba( 9, 43, 57, 0.6 );
+		border-top: 1px solid #127aec;
 		padding: 30px 0;
 		margin-top: 40px;
 		display: flex;
@@ -71,6 +71,7 @@
 			display: flex;
 			justify-content: center;
 			gap: 24px;
+			
 			.button-footer {
 				padding: 0 12px;
 				color: #8e8e8e;
@@ -87,14 +88,14 @@
 						color: rgba(139, 188, 238);
 					}
 				}
-				&:hover {
-					color: rgba(139, 188, 238);
-				}
 				.bug {
 					padding-left: 8px;
 				}
 				.talent-footer {
 					font-family: sans-serif;
+				}
+				&:hover {
+					color: rgba(139, 188, 238);
 				}
 			}
 			

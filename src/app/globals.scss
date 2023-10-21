@@ -1,5 +1,6 @@
 @import '../../components/Navbar/navbar';
 @import '../../components/Footer/footer';
+@import '../../components/About/about';
 
 * {
   box-sizing: border-box;
@@ -19,7 +20,7 @@ body {
 
 body {
   background: rgb(22,24,28);
-  background: radial-gradient(circle, rgba(22,24,28,1) 0%, rgba(0,0,0,1) 45%);
+  background: radial-gradient(circle, rgba(22,24,28) 0%, rgb(2, 4, 23) 45%);
 	background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -38,11 +39,17 @@ span {
 	color: rgba(139, 188, 238);
 }
 
+::-webkit-scrollbar-track {
+	background: rgb(2, 4, 23);
+	border: none; /* Barra de fondo transparente */
+}
+
 ::-webkit-scrollbar {
 	width: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
-	background: #1c8440;
+	background: rgb(0, 0, 0);
 	border-radius: 10px;
 }
 

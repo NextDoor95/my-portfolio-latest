@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Resiliente from '/public/resiliente-color.png'
-import Speezard from '/public/Speezard.png'
+import Resiliente from '/public/resiliente.svg'
+import Speezard from '/public/speezard.svg'
 
 function Footer() {
 
@@ -24,17 +24,17 @@ function Footer() {
                     <Link className="logo" rel='noreferrer' href="/">
                         <Image
                             src={Resiliente}
-                            alt="Resiliente"
-                            width={220}
-                            height={40}
+                            alt="Resilientes-logo"
+                            width="auto"
+                            height={50}
                             href="https://twitter.com/Resilientes_W3"
                         />
                     </Link>
                     <Link className="logo" rel='noreferrer' href="/">
                         <Image
                             src={Speezard}
-                            alt="Resiliente"
-                            width={220}
+                            alt="Speezard-logo"
+                            width="auto"
                             height={50}
                             href="https://twitter.com/Speezard_W3"
                         />
@@ -79,17 +79,17 @@ function Footer() {
                             </Link>
                     </div>
                     <div className="col">
-                        <p>Contáctame!</p>
+                        <p>Contacto</p>
                             <Link className="linkbutton" href="https://wa.me/message/5F7KIECVDD3NI1" target="_blank" rel='noreferrer'>
                                 <p className="footer-btn">
                                     WhatsApp
                                 </p>
                             </Link>
-                            <a className="linkbutton" mailto="nestorhuircapan25@gmail.com" target="_blank" rel='noreferrer'>
+                            <Link className="linkbutton" href="mailto:nestorhuircapan25@gmail.com" target="_blank" rel='noreferrer'>
                                 <p className="footer-btn">
                                     E-mail
                                 </p>
-                            </a>
+                            </Link>
                             
                     </div>
                 </div>

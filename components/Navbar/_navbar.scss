@@ -12,8 +12,8 @@
 	align-items: center;
 	z-index: 20;
 	background: rgb(22,24,28);
-	background: linear-gradient(270deg, rgba(22,24,28,1) 0%, rgba(0,0,0,1) 25%);
-	border-bottom: 0.25px solid rgba( 9, 43, 57, 0.6 );
+	background: linear-gradient(270deg, rgb(2, 4, 23, 0.01) 0%, rgba(0,0,0,1) 25%);
+	border-bottom: 0.25px solid #127aec;
 
 	.logo {
 		min-width: 60px;
