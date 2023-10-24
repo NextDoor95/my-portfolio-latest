@@ -77,7 +77,7 @@ function About(props) {
                         
                         <div className="iconstack">
                             {logos.map((l) => (
-                                <div key={l.src}>
+                                <div key={l.src} className="icon-box">
                                     <Image
                                         className="iconlogo"
                                         width={50}
@@ -85,6 +85,7 @@ function About(props) {
                                         src={l.src}
                                         alt={l.alt}
                                     />
+                                    React
                                 </div>
                             ))}
                         </div>
