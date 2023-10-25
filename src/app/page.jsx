@@ -2,6 +2,7 @@
 import Particle from '../../components/Particle/particle'
 import Navbar from '../../components/Navbar/navbar'
 import About from '../../components/About/about'
+import Experience from '../../components/Experience/experience'
 import Footer from '../../components/Footer/footer'
 
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Particle/>
       <Navbar/>
       <About/>
+      <Experience/>
       <Footer/>
     </>
   )

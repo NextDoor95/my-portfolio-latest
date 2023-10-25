@@ -7,8 +7,8 @@ import Nextgif from '/public/ProfilePic2.gif'
 function Navbar() {
 
     const links = [
-        {  href: "/#about", classname: "fa-solid fa-house", text: "sobre mí" },
-        {  href: "/#experience", classname: "fa-solid fa-brain", text: "Experiencia" },
+        {  href: "/#about", classname: "fa-solid fa-house", text: "About" },
+        {  href: "/#experience", classname: "fa-solid fa-brain", text: "Experience" },
         {  href: "/devtips", classname: "fa-solid fa-address-book", text: "Dev tips!" },
     ];
     
@@ -36,7 +36,7 @@ function Navbar() {
 
         <div className="buttons_corner">
             <Link className="greenbtn" href="https://wa.me/message/5F7KIECVDD3NI1" target="_blank" rel='noreferrer'>
-                <i className="fa-brands fa-whatsapp"></i> <div className="bug">Hablemos!</div>
+                <i className="fa-brands fa-whatsapp"></i> <div className="bug">Let's chat!</div>
             </Link>
             <div className="configbutton">
                 <i className="fa-sharp fa-solid fa-earth-americas"></i>

@@ -1,6 +1,10 @@
 "use client";
+import { Navigation, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -14,20 +18,19 @@ import Sass from 'public/stack/sass.jpg'
 import Git from 'public/stack/git.png'
 import Hardhat from 'public/stack/hardhat.png'
 import Solidity from 'public/stack/solidity.png'
-import Escarapela from 'public/escarapelaweb3.png'
 
 
 function About(props) {
 
     const logos = [
-        {src: Javascript, alt: "JavaScript Logo"},
-        {src: Typescript, alt: "TypeScript Logo"},
-        {src: Sass, alt: "Sass Logo"},
-        {src: Solidity, alt: "Solidity Logo"},
-        {src: Reacticon, alt: "React Logo"},
-        {src: Nexticon, alt: "NextJs Logo"},
-        {src: Git, alt: "Hardhat Logo"},
-        {src: Hardhat, alt: "Hardhat Logo"}
+        {id: 1, src: Javascript, alt: "JavaScript"},
+        {id: 2, src: Typescript, alt: "TypeScript"},
+        {id: 3, src: Sass, alt: "Sass"},
+        {id: 4, src: Solidity, alt: "Solidity"},
+        {id: 5, src: Reacticon, alt: "React.js"},
+        {id: 6, src: Nexticon, alt: "Next.js"},
+        {id: 7, src: Git, alt: "Git"},
+        {id: 8, src: Hardhat, alt: "Hardhat"}
     ];
 
     const icons = [
@@ -45,63 +48,99 @@ function About(props) {
                         className="spline"
                     />
                 </div>
-                <div className="social">
-                    {icons.map((i) => (
-                            <Link
-                                className="button"
-                                key={i.href}
-                                href={i.href}
-                                target='_blank'
-                                rel='noreferrer'
-                                >
-                                <i className={i.classname}></i>
-                            </Link>
-                    ))}
-                    <Link
-                        href="https://beta.talentprotocol.com/u/nextdoor"
-                        target='_blank'
-                        rel='noreferrer'
-                        className="talent-protocol"
-                                >
-                            T
-                    </Link>
-                </div>
+                
                 <div className="glass-wrap">
                     <div className="glassBox">
-                        Hola! Mi nombre es <span>Néstor</span>, soy de <span>Puerto Madryn, Chubut</span>.<br/>
-                        Desarrollador web autodidacta, me dedico a diseñar y llevar a código<br/> el <span>frontend </span>
-                        de distintos proyectos, enfocandome en <span>UX/UI</span>,<br/> entusiasta del mundo<span> web3 </span>
-                        y siempre buscando aprender más sobre<br/> las últimas tecnologías y tendencias.
-                        Uso metodologías ágiles, soy proactivo y siempre dispuesto a colaborar.
-                        <br/><span>mi tech stack:</span>
+                        <p className='text'>
+                            Hi! My name is <span>Néstor</span> from <span>Puerto Madryn, Chubut, Argentina</span>.<br/>
+                            A self-taught web developer, I specialize in designing and coding the <span>frontend </span>
+                            for various projects, with focus on <span>UX/UI</span>. I am enthusiastic about the<span> web3 </span>
+                            world and always eager to learn more about the latest technologies and trends.
+                            I use agile methodologies, very proactive, and always ready to collaborate.
+                            <br/>
+                        </p>
+                        <br/>
+                        <h2>
+                            <span>My tech stack:</span>
+                        </h2>
+                        <div className='slider'>
+                            <Swiper
+                                navigation
+                                spaceBetween={10}
+                                pagination={ false }
+                                modules={[Navigation, Autoplay]}
+                                autoplay={{
+                                    delay: 2000,
+                                    disableOnInteraction: false
+                                }}
+                                breakpoints={{
+                                    320: { slidesPerView: 3 },
+                                    724: { slidesPerView: 3 },
+                                    900: { slidesPerView: 4 },
+                                    1024: { slidesPerView: 5 },
+                                    1200: { slidesPerView: 5 },
+                                    1324: { slidesPerView: 5 },
+                                }}
+                                
+                                loop
+                            >
+                                    {logos.map((l) => (
+                                        <SwiperSlide key={l.id}>
+                                            <div className="iconstack">
+                                                <div className="icon-wrap">
+                                                    <Image
+                                                        className="iconlogo"
+                                                        width={50}
+                                                        height={50}
+                                                        src={l.src}
+                                                        alt={l.alt}
+                                                    />
+                                                    <p>{l.alt}</p>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                        
+                                    ))}
+                            </Swiper>
+                        </div>
                         
-                        <div className="iconstack">
-                            {logos.map((l) => (
-                                <div key={l.src} className="icon-box">
-                                    <Image
-                                        className="iconlogo"
-                                        width={50}
-                                        height={50}
-                                        src={l.src}
-                                        alt={l.alt}
-                                    />
-                                    React
-                                </div>
-                            ))}
+                        <div className="footer">
+                            <div className="social">
+                                {icons.map((i) => (
+                                        <Link
+                                            className="button"
+                                            key={i.href}
+                                            href={i.href}
+                                            target='_blank'
+                                            rel='noreferrer'
+                                            >
+                                            <i className={i.classname}></i>
+                                        </Link>
+                                ))}
+                                <Link
+                                    href="https://beta.talentprotocol.com/u/nextdoor"
+                                    target='_blank'
+                                    rel='noreferrer'
+                                    className="talent-protocol"
+                                            >
+                                        T
+                                </Link>
+                            </div>
+                            <div className="curriculum">
+                                <Link
+                                    className="button"
+                                    href="/pdf/FrontendCV.pdf"
+                                    target='_blank'
+                                    download='frontend-cv.pdf'
+                                    >
+                                    <div className="bug">
+                                        Download CV
+                                    </div>
+                                    <i className="fa-solid fa-cloud-arrow-down"></i>
+                                </Link>
+                            </div>
                         </div>
-                        <div className="curriculum">
-                            <Link
-                                className="button"
-                                href="/pdf/FrontendCV.pdf"
-                                target='_blank'
-                                download='frontend-cv.pdf'
-                                >
-                                <div className="bug">
-                                    Descargar CV
-                                </div>
-                                <i className="fa-solid fa-cloud-arrow-down"></i>
-                            </Link>
-                        </div>
+                        
                     </div>
                 </div>
                 

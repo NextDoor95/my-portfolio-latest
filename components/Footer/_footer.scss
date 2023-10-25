@@ -24,6 +24,15 @@
 			.logo {
 				margin: 10px;
 				line-height: 0rem;
+				opacity: 0.8;
+				transition: all 0.2s ease-in-out;
+
+				.image {
+					border-radius: 10px;
+				}
+				&:hover {
+					opacity: 1;
+				}
 			}
 			p {
 				color: #8e8e8e;
@@ -33,17 +42,19 @@
             display: flex;
 			flex-direction: column;
 			align-items: center;
-			gap: 60px;
+			gap: 40px;
 			flex-direction: row;
 			align-items: flex-start;
 			padding: 0 12px;
             .col {
                 display: flex;
 				flex-direction: column;
+				text-align: left;
 				.linkbutton {
 					margin-top: 10px;
 					p {
 						display: flex;
+
 						color: #8e8e8e;
 						transition: all 0.1s ease-out;
 						cursor: pointer;

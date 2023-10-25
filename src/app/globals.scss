@@ -1,6 +1,8 @@
 @import '../../components/Navbar/navbar';
-@import '../../components/Footer/footer';
 @import '../../components/About/about';
+@import '../../components/Experience/experience';
+@import '../../components/Footer/footer';
+
 
 * {
   box-sizing: border-box;
@@ -36,7 +38,7 @@ p {
 }
 
 span {
-	color: rgba(139, 188, 238);
+	color: rgba( 55, 175, 101, 1 );
 }
 
 ::-webkit-scrollbar-track {

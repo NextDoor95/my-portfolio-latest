@@ -1,0 +1,44 @@
+.experience {
+    max-width: 1440px;
+	margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+
+    .projects {
+        display: grid;
+        align-items: space-between;
+        justify-content: space-between;
+        gap: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+        .individualproject {
+            color: #fff;
+            padding: 1rem 1.5rem;
+            background: rgb(28, 132, 64, 0.4);
+            border-color: 1px solid red;
+            border-radius: 10px;
+            max-width: 1000px;
+            min-height: 24vh;
+            font-size: 14px;
+            transition: all .2s ease-in-out;
+
+            .socialicons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 60px;
+                .button {
+                    height: 40px;
+                    width: 40px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}

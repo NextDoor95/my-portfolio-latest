@@ -1,50 +1,12 @@
 .about {
-    height: 100vh;
-    width: 100%;
-    max-width: 1440px;
-	margin: 6vh 0 auto;
-	padding: 0 3rem;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-top: 3rem;
     scroll-snap-align: center;
     .profile {
         grid-template-columns: 1fr;
         text-align: center;
-        .social {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            .button {
-                height: 40px;
-                width: 40px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-                font-size: 20px;
-                margin: 0 10px;
-            }
-            .talent-protocol {
-                color: #fff;
-                background-color:#212121;
-                border-radius: 50px;
-                height: 40px;
-                width: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 10px;
-                font-size: 26px;
-                font-family: sans-serif;
-                border: 1px solid rgba( 9, 43, 57, 0.6 );
-                box-shadow:
-                    inset -6px -6px 16px rgba( 0, 0, 0, 1 ),
-                    inset 6px 6px 16px rgba( 9, 43, 57, 0.4 );
-                transition: all 0.2s ease-out;
-                &:hover {
-                    background-color: rgb(120, 87, 237, 0.9);
-                }
-            }
-        }
+        
         .spline {
             display: flex;
             align-items: center;
@@ -60,33 +22,45 @@
                 background: #000000;
                 box-shadow: 0 1px 2px 0 rgba(13, 56, 183, 0.8);
                 border-radius: 10px;
-                max-width: 800px;
-                min-height: 34vh;
+                max-width: 1000px;
+                min-height: 24vh;
                 font-size: 14px;
                 transition: all .2s ease-in-out;
 
-                .iconstack{
-                    width: 100%;
-                    height: 100px;
-                    margin: 20px;
+                .text{
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                }
+
+                h2 {
+                    font-size: 1.5rem;
+                    line-height: 1.6rem;
+                    margin-top: 16px;
+                }
+
+                .slider {
                     display: flex;
+                    justify-content: center;
                     align-items: center;
-                    text-align: center;
-                    justify-content: space-around;
-                    .icon-box {
-                        border-radius: 10px;
-                        height: 80px;
-                        width: 80px;
-                        border-radius: 1px solid rgb(183, 92, 13);
-                        box-shadow: inset 20px 20px 20px 20px rgba(13, 56, 183, 0.4);
-                        
-                        .iconlogo{
+                    margin: 0 auto;
+
+                    .iconstack{
+                        height: 100px;
+                        margin: 10px;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        justify-content: space-around;
+                        .icon-wrap {
                             border-radius: 10px;
-                            align-items: space-between;
+                            .iconlogo{
+                                border-radius: 10px;
+                            }
                         }
                     }
-                    
                 }
+
+                
             
                 &:hover {
                     box-shadow:  0 1px 2px 0 rgba(13, 56, 183, 0.8), 0 6px 16px 0 rgba(0,0,0,.5);
@@ -94,15 +68,57 @@
             }
 
             
-            
-            .curriculum {
+            .footer {
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                .button {
-                    line-height: 48px;
-                }            
+                flex-direction: row;
+                justify-content: space-around;
+                margin: 16px 0 auto;
+                .curriculum {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .button {
+                        line-height: 48px;
+                    }            
+                }
+                .social {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .button {
+                        height: 40px;
+                        width: 40px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        font-size: 20px;
+                        margin: 0 10px;
+                    }
+                    .talent-protocol {
+                        color: #fff;
+                        background-color:#212121;
+                        border-radius: 50px;
+                        height: 40px;
+                        width: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 10px;
+                        font-size: 26px;
+                        font-family: sans-serif;
+                        border: 1px solid rgba( 9, 43, 57, 0.6 );
+                        box-shadow:
+                            inset -6px -6px 16px rgba( 0, 0, 0, 1 ),
+                            inset 6px 6px 16px rgba( 9, 43, 57, 0.4 );
+                        transition: all 0.2s ease-out;
+                        &:hover {
+                            background-color: rgb(120, 87, 237, 0.9);
+                        }
+                    }
+                }
             }
+            
         }
     }
     .description {
@@ -117,4 +133,15 @@
             
         }
     }
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+	color: rgba( 55, 175, 101, 1 );
+    margin-left: 10px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+	color: rgba( 55, 175, 101, 1 );
 }

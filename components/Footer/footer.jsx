@@ -19,7 +19,7 @@ function Footer() {
             <div className="top">
                 <div className="left">
                     <p>
-                        Co-construyendo la web3<br/> en comunidad mínima viable
+                        Co-building web3 <br/> in minimum viable community
                     </p>
                     <Link className="logo" rel='noreferrer' href="/">
                         <Image
@@ -27,6 +27,7 @@ function Footer() {
                             alt="Resilientes-logo"
                             width="auto"
                             height={50}
+                            className='image'
                             href="https://twitter.com/Resilientes_W3"
                         />
                     </Link>
@@ -36,6 +37,7 @@ function Footer() {
                             alt="Speezard-logo"
                             width="auto"
                             height={50}
+                            className='image'
                             href="https://twitter.com/Speezard_W3"
                         />
                     </Link>
@@ -43,15 +45,15 @@ function Footer() {
                 <div className="right">
 
                     <div className="col">
-                        <p>Volver a ver</p>
+                        <p>See again</p>
                             <Link className="linkbutton" href="/#about" rel='noreferrer'>
                                 <p className="footer-btn">
-                                    sobre mí
+                                    About
                                 </p>
                             </Link>
                             <Link className="linkbutton" href="/#experience" rel='noreferrer'>
                                 <p className="footer-btn">
-                                    Experiencia
+                                    Experience
                                 </p>
                             </Link>
                             <Link className="linkbutton" href="/#contact" rel='noreferrer'>
@@ -61,15 +63,10 @@ function Footer() {
                             </Link>
                     </div>
                     <div className="col">
-                        <p>Comunidades web3</p>
+                        <p>Web3 communities</p>
                             <Link className="linkbutton" href="https://twitter.com/Resilientes_W3" target="_blank" rel='noreferrer'>
                                 <p className="footer-btn">
                                     Resilientes
-                                </p>
-                            </Link>
-                            <Link className="linkbutton" href="https://twitter.com/LaCryptaOficial" target="_blank" rel='noreferrer'>
-                                <p className="footer-btn">
-                                    La Crypta
                                 </p>
                             </Link>
                             <Link className="linkbutton" href="https://twitter.com/ThinkandDev" target="_blank" rel='noreferrer'>
@@ -77,9 +74,14 @@ function Footer() {
                                     Think&Dev
                                 </p>
                             </Link>
+                            <Link className="linkbutton" href="https://twitter.com/LaCryptaOficial" target="_blank" rel='noreferrer'>
+                                <p className="footer-btn">
+                                    La Crypta
+                                </p>
+                            </Link>
                     </div>
                     <div className="col">
-                        <p>Contacto</p>
+                        <p>Contact</p>
                             <Link className="linkbutton" href="https://wa.me/message/5F7KIECVDD3NI1" target="_blank" rel='noreferrer'>
                                 <p className="footer-btn">
                                     WhatsApp
