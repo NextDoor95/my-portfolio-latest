@@ -1,44 +1,70 @@
 .experience {
     max-width: 1440px;
 	margin: 0 auto;
-    grid-template-columns: repeat(2, 1fr);
 
-    .projects {
-        display: grid;
-        align-items: space-between;
-        justify-content: space-between;
-        gap: 4rem;
-        grid-template-columns: repeat(auto-fit, minmax(500px, auto));
-        .individualproject {
-            color: #fff;
-            padding: 1rem 1.5rem;
-            background: rgb(28, 132, 64, 0.4);
-            border-color: 1px solid red;
-            border-radius: 10px;
-            max-width: 1000px;
-            min-height: 24vh;
-            font-size: 14px;
-            transition: all .2s ease-in-out;
-
-            .socialicons {
+        .slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        
+            .individualproject {
                 display: flex;
+                justify-content: space-around;
                 align-items: center;
-                justify-content: center;
-                margin-top: 60px;
-                .button {
-                    height: 40px;
-                    width: 40px;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
+                max-width: 400px;
+                margin: 50px;
+
+                .glassBox {
                     color: #fff;
-                    font-size: 20px;
-                    display: flex;
-                    align-items: center;
-                    text-align: center;
-                    margin: 0 10px;
+                    padding: 1rem 1.5rem;
+                    background: #000000;
+                    box-shadow: 0 1px 2px 0 rgba(13, 56, 183, 0.8);
+                    border-radius: 10px;
+                    max-width: 400px;
+                    height: 400px;
+                    font-size: 14px;
+                    transition: all .2s ease-in-out;
+
+                    .imgproject {
+                        margin-bottom: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .img {
+                            margin-top: 20px;
+                            border-radius: 10px;
+                            box-shadow:  -16px 16px 4px 0 rgba(0, 0, 0, 0.6 );
+                        }
+                    }
+
+                    .text {
+                        margin: 18px;
+                        line-height: 1rem;
+                        .title {
+                            padding-bottom: 20px;
+                        }
+                    }
+
+                    .socialicons {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .button {
+                            height: 40px;
+                            width: 40px;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #fff;
+                            font-size: 20px;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            margin: 0 10px;
+                        }
+                    }
                 }
             }
         }
-    }
 }

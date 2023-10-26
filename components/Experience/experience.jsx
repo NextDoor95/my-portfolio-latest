@@ -1,9 +1,16 @@
+"use client";
+import { Navigation, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import Image from 'next/image'
 
 import Link from 'next/link'
 
 import Nof from 'public/experience/nof.png'
-import Speezard from 'public/experience/SpeezardProject.png'
+import Speezard from 'public/experience/Speezard.png'
 import Clock from 'public/experience/project7.png'
 
 function Experience() {
@@ -14,10 +21,10 @@ function Experience() {
             src: Speezard,
             alt: "Speezard project",
             title: "Speezard",
-            text: "Pre-aceleradora web3 que ofrece una plataforma integral para startups. Con más de 15 proyectos iniciados y una comunidad de más de 700 cracks de IT, este proyecto se convirtió en una herramienta esencial para impulsar el crecimiento y desarrollo de emprendimientos emergentes en el ecosistema Web3.",
+            text: "Frontend developer in my spare time for the Speezard pre-accelerator.",
             web: 'https://www.speezard.io/',
             webbtn: "fa-solid fa-link",
-            code: 'https://github.com/P4-Games/NoF-LandingPage',
+            code: 'https://github.com/leonardoromero/landing-speezard',
             codebtn: "fa-brands fa-github",
             discord: 'https://discord.gg/resiliente',
             discordbtn: "fa-brands fa-discord",
@@ -29,7 +36,7 @@ function Experience() {
             src: Nof,
             alt: "Nof project",
             title: "Number One Fan",
-            text: "NOF es un proyecto web3 que combina juegos y coleccionismo de álbumes NFTs con estilo PixelArt. Los jugadores adquieren álbumes NFTs exclusivos, ganan recompensas y construyen su colección. La comunidad de NOF cuenta con más de 450 miembros en Discord y ofrece la posibilidad de comprar/vender coleccionables en OpenSea.",
+            text: "My first real Web3 project that combines gaming and NFT album collectibles with a PixelArt style.",
             web: 'https://nof.town/',
             webbtn: "fa-solid fa-link",
             code: 'https://github.com/P4-Games/NoF-LandingPage',
@@ -78,69 +85,87 @@ function Experience() {
         </div>
 
         <div>
-            <div className="projects">
-                
-
-                {projects.map((p) => (
-                    <div key={p.id} className="individualproject">
-                        <div className="imgproject">
-                            <Image 
-                                src={p.src}
-                                alt={p.alt}
-                                height={200}
-                                width={400}
-                                className="img"
-                            />
-                        </div>
-                        <div className="glassBox">
-                            <div>
-                                <span>
-                                    {p.title} :
-                                </span>
-                                    
-                            </div>
-                            <div>
-                                {p.text}
-                            </div>
-                            <div className="socialicons">
-                                <Link
-                                    className="button"
-                                    href={p.web}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                >
-                                    <i className={p.webbtn}></i>
-                                </Link>
-                                <Link
-                                    className="button"
-                                    href={p.code}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                >
-                                    <i className={p.codebtn}></i>
-                                </Link>
-                                <Link
-                                    className="button"
-                                    href={p.discord}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                >
-                                    <i className={p.discordbtn}></i>
-                                </Link>
-                                <Link
-                                    className="button"
-                                    href={p.twitter}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                >
-                                    <i className={p.twitterbtn}></i>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-                
-            </div>
+                <div className='slider'>
+                    <Swiper
+                        navigation
+                        modules={[Navigation, Autoplay]}
+                        autoplay={{
+                            delay: 8000,
+                            disableOnInteraction: false
+                        }}
+                        breakpoints={{
+                            320: { slidesPerView: 2 },
+                            724: { slidesPerView: 2 },
+                            900: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 },
+                            1200: { slidesPerView: 3 },
+                            1324: { slidesPerView: 3 },
+                        }}
+                        loop
+                    >
+                        {projects.map((p) => (
+                            <SwiperSlide key={p.id}>
+                                <div className="individualproject">
+                                    <div className="glassBox">
+                                        <div className="imgproject">
+                                            <Image 
+                                                src={p.src}
+                                                alt={p.alt}
+                                                height={150}
+                                                width={300}
+                                                className="img"
+                                            />
+                                        </div>
+                                        <div className="text">
+                                            <div className="title">
+                                                <span>
+                                                    {p.title} :
+                                                </span>
+                                            </div>
+                                            <div>
+                                                {p.text}
+                                            </div>
+                                        </div>
+                                        <div className="socialicons">
+                                            <Link
+                                                className="button"
+                                                href={p.web}
+                                                target='_blank'
+                                                rel='noreferrer'
+                                            >
+                                                <i className={p.webbtn}></i>
+                                            </Link>
+                                            <Link
+                                                className="button"
+                                                href={p.code}
+                                                target='_blank'
+                                                rel='noreferrer'
+                                            >
+                                                <i className={p.codebtn}></i>
+                                            </Link>
+                                            <Link
+                                                className="button"
+                                                href={p.discord}
+                                                target='_blank'
+                                                rel='noreferrer'
+                                            >
+                                                <i className={p.discordbtn}></i>
+                                            </Link>
+                                            <Link
+                                                className="button"
+                                                href={p.twitter}
+                                                target='_blank'
+                                                rel='noreferrer'
+                                            >
+                                                <i className={p.twitterbtn}></i>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
         </div>
     </section>
     )
