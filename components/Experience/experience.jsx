@@ -12,6 +12,8 @@ import Link from 'next/link'
 import Nof from 'public/experience/nof.png'
 import Speezard from 'public/experience/Speezard.png'
 import Clock from 'public/experience/project7.png'
+import Wapu from 'public/experience/Wapu.png'
+import Point from 'public/experience/Point.png'
 
 function Experience() {
 
@@ -36,7 +38,7 @@ function Experience() {
             src: Nof,
             alt: "Nof project",
             title: "Number One Fan",
-            text: "My first real Web3 project that combines gaming and NFT album collectibles with a PixelArt style.",
+            text: "Web3 project that combines gaming and NFT album collectibles with a PixelArt style.",
             web: 'https://nof.town/',
             webbtn: "fa-solid fa-link",
             code: 'https://github.com/P4-Games/NoF-LandingPage',
@@ -48,25 +50,34 @@ function Experience() {
         },
         {
             id: 3,
-            src: Speezard,
-            alt: "Speezard project",
-            title: "Speezard Lorem lorem",
-            text: "Lorem ipsum no me acuerdo como seguía y no me tira el shortcut para poner un texto largo acá, pero como tome suficiente café puedo hacerlo mas rapido que VSCode, yo 1, VSCode 0.",
-            web: 'https://www.speezard.io/',
+            src: Wapu,
+            alt: "Wapu app",
+            title: "Wapu",
+            text: "Web3 wallet to pay P2P with no restrictions in diferent countries!.",
+            web: 'https://app.cryptopagos.xyz/',
             webbtn: "fa-solid fa-link",
-            code: 'https://github.com/P4-Games/NoF-LandingPage',
+            code: 'https://github.com/AndresChapo/survivors',
             codebtn: "fa-brands fa-github",
-            discord: 'https://discord.gg/resiliente',
+            discord: 'https://discord.gg/WzuKc7Bzt3',
             discordbtn: "fa-brands fa-discord",
-            twitter: 'https://twitter.com/Speezard_W3',
+            twitter: 'https://twitter.com/wapupay',
             twitterbtn: "fa-brands fa-twitter"
         },
         {
             id: 4,
+            src: Point,
+            alt: "Point project",
+            title: "Tienda Point",
+            text: "Store edited for Mercado Shops (Mercado Libre).",
+            web: 'https://www.tiendapoint.com.ar/',
+            webbtn: "fa-solid fa-link",
+        },
+        {
+            id: 5,
             src: Clock,
             alt: "Clock project",
-            title: "Reloj UX/UI",
-            text: "Reloj moderno de estilo minimalista con dark/light-mode y datos de la fecha actual hecho puramente con HTML, CSS y JavaScript",
+            title: "clock UX/UI",
+            text: "Modern minimalist style clock with dark/light-mode.",
             web: 'https://nextdoor95.github.io/UX-UI-Clock.github.io/Index.html',
             webbtn: "fa-solid fa-link",
             code: 'https://github.com/NextDoor95/UX-UI-Clock.github.io',
@@ -90,7 +101,7 @@ function Experience() {
                         navigation
                         modules={[Navigation, Autoplay]}
                         autoplay={{
-                            delay: 8000,
+                            delay: 12000,
                             disableOnInteraction: false
                         }}
                         breakpoints={{
@@ -135,7 +146,7 @@ function Experience() {
                                             >
                                                 <i className={p.webbtn}></i>
                                             </Link>
-                                            <Link
+                                            {p.discord && (<Link
                                                 className="button"
                                                 href={p.code}
                                                 target='_blank'
@@ -143,7 +154,8 @@ function Experience() {
                                             >
                                                 <i className={p.codebtn}></i>
                                             </Link>
-                                            <Link
+                                            )}
+                                            {p.discord && (<Link
                                                 className="button"
                                                 href={p.discord}
                                                 target='_blank'
@@ -151,7 +163,8 @@ function Experience() {
                                             >
                                                 <i className={p.discordbtn}></i>
                                             </Link>
-                                            <Link
+                                            )}
+                                            {p.twitter && (<Link
                                                 className="button"
                                                 href={p.twitter}
                                                 target='_blank'
@@ -159,6 +172,7 @@ function Experience() {
                                             >
                                                 <i className={p.twitterbtn}></i>
                                             </Link>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

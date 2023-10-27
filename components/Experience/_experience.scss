@@ -25,6 +25,10 @@
                     height: 400px;
                     font-size: 14px;
                     transition: all .2s ease-in-out;
+                    &:hover {
+                        transform: scale(1.01);
+                        box-shadow:  0 1px 2px 0 rgba(13, 56, 183, 0.8), 0 6px 16px 0 rgba(13, 56, 183, 0.8);
+                    }
 
                     .imgproject {
                         margin-bottom: 30px;
