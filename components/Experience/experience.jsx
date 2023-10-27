@@ -14,6 +14,7 @@ import Speezard from 'public/experience/Speezard.png'
 import Clock from 'public/experience/project7.png'
 import Wapu from 'public/experience/Wapu.png'
 import Point from 'public/experience/Point.png'
+import Scd from 'public/experience/Scd.png'
 
 function Experience() {
 
@@ -74,6 +75,15 @@ function Experience() {
         },
         {
             id: 5,
+            src: Scd,
+            alt: "SCD project",
+            title: "SCD distributor",
+            text: "Distributor store edited for Mercado Shops (Mercado Libre).",
+            web: 'https://www.scd-distribuidora.com.ar/',
+            webbtn: "fa-solid fa-link",
+        },
+        {
+            id: 6,
             src: Clock,
             alt: "Clock project",
             title: "clock UX/UI",
@@ -105,8 +115,8 @@ function Experience() {
                             disableOnInteraction: false
                         }}
                         breakpoints={{
-                            320: { slidesPerView: 2 },
-                            724: { slidesPerView: 2 },
+                            320: { slidesPerView: 1 },
+                            724: { slidesPerView: 1 },
                             900: { slidesPerView: 2 },
                             1024: { slidesPerView: 3 },
                             1200: { slidesPerView: 3 },

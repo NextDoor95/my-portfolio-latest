@@ -75,7 +75,7 @@ function About(props) {
                                 }}
                                 breakpoints={{
                                     320: { slidesPerView: 3 },
-                                    724: { slidesPerView: 3 },
+                                    724: { slidesPerView: 4 },
                                     900: { slidesPerView: 4 },
                                     1024: { slidesPerView: 5 },
                                     1200: { slidesPerView: 5 },
@@ -105,6 +105,19 @@ function About(props) {
                         </div>
                         
                         <div className="footer">
+                            <div className="curriculum">
+                                <Link
+                                    className="button"
+                                    href="/pdf/FrontendCV.pdf"
+                                    target='_blank'
+                                    download='frontend-cv.pdf'
+                                    >
+                                    <div className="bug">
+                                        Download CV
+                                    </div>
+                                    <i className="fa-solid fa-cloud-arrow-down"></i>
+                                </Link>
+                            </div>
                             <div className="social">
                                 {icons.map((i) => (
                                         <Link
@@ -124,19 +137,6 @@ function About(props) {
                                     className="talent-protocol"
                                             >
                                         T
-                                </Link>
-                            </div>
-                            <div className="curriculum">
-                                <Link
-                                    className="button"
-                                    href="/pdf/FrontendCV.pdf"
-                                    target='_blank'
-                                    download='frontend-cv.pdf'
-                                    >
-                                    <div className="bug">
-                                        Download CV
-                                    </div>
-                                    <i className="fa-solid fa-cloud-arrow-down"></i>
                                 </Link>
                             </div>
                         </div>
