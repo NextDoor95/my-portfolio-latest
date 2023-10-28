@@ -37,16 +37,7 @@ function Navbar() {
         <div className="buttons_corner">
             <Link className="greenbtn" href="https://wa.me/message/5F7KIECVDD3NI1" target="_blank" rel='noreferrer'>
                 <i className="fa-brands fa-whatsapp"></i> <div className="bug">Lets chat!</div>
-            </Link>
-            <div className="configbutton">
-                <i className="fa-sharp fa-solid fa-earth-americas"></i>
-            </div>
-            <div className="toggle-switch">
-                <label className="switch-label">
-                    <input type="checkbox" className="checkbox"></input>
-                    <span className="slider"></span>
-                </label>
-            </div>  
+            </Link> 
         </div>
     </div>
     )

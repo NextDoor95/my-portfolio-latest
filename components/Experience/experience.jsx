@@ -69,7 +69,7 @@ function Experience() {
             src: Point,
             alt: "Point project",
             title: "Tienda Point",
-            text: "Store edited for Mercado Shops (Mercado Libre).",
+            text: "Mercado Libre: Store edited for Mercado Shops.",
             web: 'https://www.tiendapoint.com.ar/',
             webbtn: "fa-solid fa-link",
         },
@@ -78,7 +78,7 @@ function Experience() {
             src: Scd,
             alt: "SCD project",
             title: "SCD distributor",
-            text: "Distributor store edited for Mercado Shops (Mercado Libre).",
+            text: "Mercado Libre: Distributor store edited for Mercado Shops.",
             web: 'https://www.scd-distribuidora.com.ar/',
             webbtn: "fa-solid fa-link",
         },
@@ -86,7 +86,7 @@ function Experience() {
             id: 6,
             src: Clock,
             alt: "Clock project",
-            title: "clock UX/UI",
+            title: "Clock UX/UI",
             text: "Modern minimalist style clock with dark/light-mode.",
             web: 'https://nextdoor95.github.io/UX-UI-Clock.github.io/Index.html',
             webbtn: "fa-solid fa-link",
@@ -101,9 +101,9 @@ function Experience() {
 
     return (
     <section className="experience" id="experience">
-        <div className="title">
-            Experiencia
-        </div>
+        <h2 className="title">
+            Experience
+        </h2>
 
         <div>
                 <div className='slider'>
@@ -138,9 +138,9 @@ function Experience() {
                                             />
                                         </div>
                                         <div className="text">
-                                            <div className="title">
+                                            <div className="subtitle">
                                                 <span>
-                                                    {p.title} :
+                                                    {p.title}
                                                 </span>
                                             </div>
                                             <div>

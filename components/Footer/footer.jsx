@@ -97,11 +97,6 @@ function Footer() {
                 </div>
             </div>
             <div className="bottom">
-                <div className="rights-reserved">
-                    <p>
-                        NextDoor | 2023 © all rights reserved.
-                    </p>
-                </div>
                 <div className="social">
                     <Link
                         className="button-footer" 
@@ -120,6 +115,11 @@ function Footer() {
                         </Link>
                     ))}
                     
+                </div>
+                <div className="rights-reserved">
+                    <p>
+                        NextDoor | 2023 © all rights reserved.
+                    </p>
                 </div>
             </div>
         </section>

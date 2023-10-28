@@ -2,7 +2,7 @@
 @import '../../components/About/about';
 @import '../../components/Experience/experience';
 @import '../../components/Footer/footer';
-
+@import './devtips';
 
 * {
   box-sizing: border-box;
@@ -38,7 +38,7 @@ p {
 }
 
 span {
-	color: rgba( 55, 175, 101, 1 );
+	color: rgba( 55, 175, 101);
 }
 
 ::-webkit-scrollbar-track {
@@ -56,7 +56,7 @@ span {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #1c8440;
+	background: rgba( 55, 175, 101);
 }
 
 .button {
