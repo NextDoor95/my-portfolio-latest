@@ -1,5 +1,6 @@
 .footer {
 	max-width: 1440px;
+	max-height: 400px;
 	margin: 0 auto;
 	padding: 0 3rem;
 	display: flex;
@@ -57,6 +58,7 @@
 			flex-direction: row;
 			align-items: flex-start;
 			padding: 0 12px;
+			padding-top: 12vh;
 			@media only screen and (min-width: 320px) and (max-width: 767px) {
 				gap: 20px;
 			}
@@ -73,7 +75,7 @@
 						transition: all 0.1s ease-out;
 						cursor: pointer;
 						&:hover {
-							color: rgba(139, 188, 238);
+							color: rgba( 55, 175, 101, 1 );
 						}
 					}
 				}
@@ -119,7 +121,7 @@
 					color: #8e8e8e;
 					transition: all 0.1s ease-out;
 					&:hover {
-						color: rgba(139, 188, 238);
+						color: rgba( 55, 175, 101, 1 );
 					}
 				}
 				.bug {
@@ -129,7 +131,7 @@
 					font-family: sans-serif;
 				}
 				&:hover {
-					color: rgba(139, 188, 238);
+					color: rgba( 55, 175, 101, 1 );
 				}
 			}
 			

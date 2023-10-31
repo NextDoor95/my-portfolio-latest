@@ -81,26 +81,24 @@ function About(props) {
                                     1200: { slidesPerView: 5 },
                                     1324: { slidesPerView: 5 },
                                 }}
-                                
                                 loop
                             >
-                                    {logos.map((l) => (
-                                        <SwiperSlide key={l.id}>
-                                            <div className="iconstack">
-                                                <div className="icon-wrap">
-                                                    <Image
-                                                        className="iconlogo"
-                                                        width={50}
-                                                        height={50}
-                                                        src={l.src}
-                                                        alt={l.alt}
-                                                    />
-                                                    <p>{l.alt}</p>
-                                                </div>
+                                {logos.map((l) => (
+                                    <SwiperSlide key={l.id}>
+                                        <div className="iconstack">
+                                            <div className="icon-wrap">
+                                                <Image
+                                                    className="iconlogo"
+                                                    width={50}
+                                                    height={50}
+                                                    src={l.src}
+                                                    alt={l.alt}
+                                                />
+                                                <p>{l.alt}</p>
                                             </div>
-                                        </SwiperSlide>
-                                        
-                                    ))}
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
                             </Swiper>
                         </div>
                         
@@ -111,7 +109,7 @@ function About(props) {
                                     href="/pdf/FrontendCV.pdf"
                                     target='_blank'
                                     download='frontend-cv.pdf'
-                                    >
+                                >
                                     <div className="bug">
                                         Download CV
                                     </div>
@@ -140,10 +138,8 @@ function About(props) {
                                 </Link>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
-                
             </div>
         </section>
     )
