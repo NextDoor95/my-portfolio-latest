@@ -27,7 +27,7 @@ function Particle() {
                     quantity: 4,
                 },
                 repulse: {
-                    distance: 600,
+                    distance: 900,
                     duration: 0.4,
                 },
             },
@@ -38,7 +38,7 @@ function Particle() {
             },
             links: {
                 color: "#127aec",
-                distance: 100,
+                distance: 150,
                 enable: true,
                 opacity: 0.5,
                 width: 0.5,

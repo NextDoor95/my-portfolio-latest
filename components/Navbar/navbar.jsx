@@ -1,20 +1,52 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { useState, useEffect } from 'react'
+
+import Whatsapp from '/public/social/whatsapp.svg'
+
+/*import { Slant as Hamburger } from 'hamburger-react'*/
 
 import Nextgif from '/public/ProfilePic2.gif'
 
 function Navbar() {
 
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+      });
+    
+      useEffect(() => {
+        function handleResize() {
+          setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+          });
+        }
+    
+        window.addEventListener('resize', handleResize);
+        handleResize();
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+
     const links = [
-        {  href: "/#about", classname: "fa-solid fa-house", text: "About" },
-        {  href: "/#experience", classname: "fa-solid fa-brain", text: "Experience" },
-        {  href: "/devtips", classname: "fa-solid fa-address-book", text: "Dev tips!" },
+        {  href: "#about", classname: "fa-solid fa-house", text: "About" },
+        {  href: "#experience", classname: "fa-solid fa-brain", text: "Experience" },
+        {  href: "/devtips", classname: "fa-solid fa-address-book", text: "Dev-tips!" },
     ];
     
     return (
     <div className="navbar">
-        <Link className="logo" rel='noreferrer' href="/">
+        <Link
+            className="logo"
+            rel='noreferrer'
+            href="/"
+        >
             <Image
                 src={Nextgif}
                 alt="Logo"
@@ -22,22 +54,44 @@ function Navbar() {
                 width={60}
                 height={60}
                 className="gif"
-                href="/#about"
+                href="/"
             />
         </Link>
         
         <div className="buttons_mid">
             {links.map((l) => (
                 <Link className="button" key={l.href} href={l.href}>
-                    <i className={l.classname}></i><div className="bug">{l.text}</div>
+                    <div className='icons-navbar'><i className={l.classname}></i></div><p className="bug">{l.text}</p>
                 </Link>
             ))}
         </div>
 
         <div className="buttons_corner">
-            <Link className="greenbtn" href="https://wa.me/message/5F7KIECVDD3NI1" target="_blank" rel='noreferrer'>
-                <i className="fa-brands fa-whatsapp"></i> <div className="bug">Lets chat!</div>
-            </Link> 
+            {windowSize.width <= 900 ? (
+                
+                <Link className="whatsapp-mobile" rel='noreferrer' href="/">
+                    <Image
+                        src={Whatsapp}
+                        alt="Resilientes-logo"
+                        width="auto"
+                        height={35}
+                        className='image'
+                        href="https://twitter.com/Resilientes_W3"
+                    /> 
+                </Link>
+                ) : (
+                <Link className="greenbtn" href="https://wa.me/message/5F7KIECVDD3NI1" target="_blank" rel='noreferrer'>
+                    <Image
+                        src={Whatsapp}
+                        alt="Resilientes-logo"
+                        width="auto"
+                        height={25}
+                        className='image'
+                        href="https://twitter.com/Resilientes_W3"
+                    />
+                    <div className="chat">Lets chat!</div>
+                </Link>
+            )}
         </div>
     </div>
     )

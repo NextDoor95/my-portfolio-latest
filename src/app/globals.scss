@@ -47,6 +47,9 @@ span {
 
 ::-webkit-scrollbar {
 	width: 10px;
+	@media only screen and (min-width: 320px) and (max-width: 767px) {
+			display: none;
+	}
 }
 
 ::-webkit-scrollbar-thumb {
@@ -81,14 +84,23 @@ span {
 	transition: all 0.2s ease-out;
 	@media only screen and (min-width: 320px) and (max-width: 767px) {
 		height: 30px;
-        width: 30px;
-		font-size: 10px;
+        width: 90px;
+		font-size: 12px;
+		font-weight: 600;
 		line-height: 16px;
+		padding: 0 4px;
+		border-radius: 10px;
+		.icons-navbar {
+			display: none;
+		}
 	}
 	&:hover {
 		background-color: rgb(16, 63, 83);
 	}
 	.bug {
 		padding-left: 8px;
+		@media only screen and (min-width: 320px) and (max-width: 767px) {
+			padding-left: 0px;
+		}
 	}
 }
