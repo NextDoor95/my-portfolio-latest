@@ -59,7 +59,7 @@
 			padding: 0 4px;
 			border-radius: 10px;
 			margin-top: 140px;
-			right: -40px;
+			right: -50px;
 		}
 		.greenbtn {
 			background-color:green;
@@ -83,19 +83,15 @@
 				background-color: rgba(8, 89, 39, 0.6);
 			}
 
-			@media only screen and (min-width: 320px) and (max-width: 767px) {
-				
-			}
-
 			.whatsapp-mobile {
 				position: absolute;
 				height: 30px;
-        width: 90px;
-		font-size: 12px;
-		font-weight: 600;
-		line-height: 16px;
-		padding: 0 4px;
-		border-radius: 10px;
+				width: 90px;
+				font-size: 12px;
+				font-weight: 600;
+				line-height: 16px;
+				padding: 0 4px;
+				border-radius: 10px;
 			}
 
 			.chat {
