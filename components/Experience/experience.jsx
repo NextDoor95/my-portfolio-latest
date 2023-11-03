@@ -133,7 +133,7 @@ function Experience() {
                                                 src={p.src}
                                                 alt={p.alt}
                                                 height={150}
-                                                width={350}
+                                                width={300}
                                                 className="img"
                                             />
                                         </div>

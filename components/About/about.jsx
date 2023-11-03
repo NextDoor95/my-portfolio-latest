@@ -56,7 +56,7 @@ function About(props) {
                             A self-taught web developer, I specialize in designing and coding the <span>frontend </span>
                             for various projects, with focus on <span>UX/UI</span>. I am enthusiastic about the<span> web3 </span>
                             world and always eager to learn more about the latest technologies and trends.
-                            I use agile methodologies, very proactive, and always ready to collaborate.
+                            I am proactive, using agile methodologies, and always ready to collaborate.
                             <br/>
                         </p>
                         <br/>

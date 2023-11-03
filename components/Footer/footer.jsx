@@ -11,7 +11,7 @@ function Footer() {
         {href: "https://www.linkedin.com/in/nextdoor-frontend/", classname: "fa-brands fa-linkedin-in", text: "LinkedIn"},
         {href: "https://twitter.com/NextDoor95", classname: "fa-brands fa-twitter", text: "Twitter"},
         {href: "https://github.com/NextDoor95", classname: "fa-brands fa-github", text: "Github"},
-        {href: "https://github.com/NextDoor95/PortfolioWeb", classname: "fa-solid fa-file-code", text: "Portfolio code"},
+        {href: "https://github.com/NextDoor95/my-portfolio-latest", classname: "fa-solid fa-file-code", text: "Portfolio code"},
     ]
 
     return (
@@ -30,7 +30,7 @@ function Footer() {
                             className='image'
                         />
                     </Link>
-                    <Link className="logo" rel='noreferrer' target='_blank' href="https://twitter.com/Speezard_W3">
+                    <Link className="logo" rel='noreferrer' target='_blank' href="https://www.speezard.io/">
                         <Image
                             src={Speezard}
                             alt="Speezard-logo"
@@ -54,7 +54,7 @@ function Footer() {
                                     Experience
                                 </p>
                             </Link>
-                            <Link className="linkbutton" href="#contact" rel='noreferrer'>
+                            <Link className="linkbutton" href="/dev" rel='noreferrer'>
                                 <p className="footer-btn">
                                     Dev Tips!
                                 </p>

@@ -24,7 +24,7 @@ function Particle() {
             },
             modes: {
                 push: {
-                    quantity: 4,
+                    quantity: 2,
                 },
                 repulse: {
                     distance: 900,

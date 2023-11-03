@@ -138,7 +138,7 @@ function Devtips() {
                                                 src={t.src}
                                                 alt={t.alt}
                                                 height={150}
-                                                width={350}
+                                                width={300}
                                                 className="img"
                                             />
                                         </div>
