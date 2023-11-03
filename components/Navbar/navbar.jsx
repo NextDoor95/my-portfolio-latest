@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import { useState, useEffect } from 'react'
 
-import Whatsapp from '/public/social/whatsapp.svg'
+import Whatsapp from '/public/social/WhatsApp.svg'
 
 /*import { Slant as Hamburger } from 'hamburger-react'*/
 
