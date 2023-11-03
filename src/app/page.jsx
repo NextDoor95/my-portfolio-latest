@@ -8,6 +8,7 @@ import Experience from '../../components/Experience/experience'
 export default function Home() {
   return (
     <>
+      
       <About/>
       <Experience/>
     </>
