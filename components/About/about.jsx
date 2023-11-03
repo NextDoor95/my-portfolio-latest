@@ -42,7 +42,7 @@ function About(props) {
     return (
         <section className="about" id="about">
             <div className="profile">
-                <div>
+                <div className="spline-wrap">
                     <Spline
                         scene="https://draft.spline.design/n2cho1B-rb-ecbcd/scene.splinecode"
                         className="spline"

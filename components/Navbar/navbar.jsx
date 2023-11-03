@@ -35,9 +35,9 @@ function Navbar() {
       }, []);
 
     const links = [
-        {  href: "#about", classname: "fa-solid fa-house", text: "About" },
-        {  href: "#experience", classname: "fa-solid fa-brain", text: "Experience" },
-        {  href: "/devtips", classname: "fa-solid fa-address-book", text: "Dev-tips!" },
+        {  href: "/#about", classname: "fa-solid fa-house", text: "About" },
+        {  href: "/#experience", classname: "fa-solid fa-brain", text: "Experience" },
+        {  href: "/dev", classname: "fa-solid fa-address-book", text: "Dev-tips!" },
     ];
     
     return (

@@ -21,24 +21,22 @@ function Footer() {
                     <p>
                         Co-building web3 <br/> in minimum viable community
                     </p>
-                    <Link className="logo" rel='noreferrer' href="/">
+                    <Link className="logo" rel='noreferrer' target='_blank' href="https://twitter.com/Resilientes_W3">
                         <Image
                             src={Resiliente}
                             alt="Resilientes-logo"
                             width="auto"
                             height={50}
                             className='image'
-                            href="https://twitter.com/Resilientes_W3"
                         />
                     </Link>
-                    <Link className="logo" rel='noreferrer' href="/">
+                    <Link className="logo" rel='noreferrer' target='_blank' href="https://twitter.com/Speezard_W3">
                         <Image
                             src={Speezard}
                             alt="Speezard-logo"
                             width="auto"
                             height={50}
                             className='image'
-                            href="https://twitter.com/Speezard_W3"
                         />
                     </Link>
                 </div>
@@ -46,17 +44,17 @@ function Footer() {
 
                     <div className="col">
                         <p>See again</p>
-                            <Link className="linkbutton" href="/#about" rel='noreferrer'>
+                            <Link className="linkbutton" href="#about" rel='noreferrer'>
                                 <p className="footer-btn">
                                     About
                                 </p>
                             </Link>
-                            <Link className="linkbutton" href="/#experience" rel='noreferrer'>
+                            <Link className="linkbutton" href="#experience" rel='noreferrer'>
                                 <p className="footer-btn">
                                     Experience
                                 </p>
                             </Link>
-                            <Link className="linkbutton" href="/#contact" rel='noreferrer'>
+                            <Link className="linkbutton" href="#contact" rel='noreferrer'>
                                 <p className="footer-btn">
                                     Dev Tips!
                                 </p>

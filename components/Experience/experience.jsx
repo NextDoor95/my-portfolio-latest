@@ -26,7 +26,7 @@ function Experience() {
             title: "Speezard",
             text: "Frontend developer in my spare time for the Speezard pre-accelerator.",
             web: 'https://www.speezard.io/',
-            webbtn: "fa-solid fa-link",
+            webbtn: "fa-solid fa-arrow-up-right-from-square",
             code: 'https://github.com/leonardoromero/landing-speezard',
             codebtn: "fa-brands fa-github",
             discord: 'https://discord.gg/resiliente',
@@ -41,7 +41,7 @@ function Experience() {
             title: "Number One Fan",
             text: "Web3 project that combines gaming and NFT album collectibles with a PixelArt style.",
             web: 'https://nof.town/',
-            webbtn: "fa-solid fa-link",
+            webbtn: "fa-solid fa-arrow-up-right-from-square",
             code: 'https://github.com/P4-Games/NoF-LandingPage',
             codebtn: "fa-brands fa-github",
             discord: 'https://discord.gg/4Bvp5bVmCz',
@@ -56,7 +56,7 @@ function Experience() {
             title: "Wapu",
             text: "Web3 wallet to pay P2P with no restrictions in diferent countries!.",
             web: 'https://app.cryptopagos.xyz/',
-            webbtn: "fa-solid fa-link",
+            webbtn: "fa-solid fa-arrow-up-right-from-square",
             code: 'https://github.com/AndresChapo/survivors',
             codebtn: "fa-brands fa-github",
             discord: 'https://discord.gg/WzuKc7Bzt3',
@@ -71,7 +71,7 @@ function Experience() {
             title: "Tienda Point",
             text: "Mercado Libre: Store edited for Mercado Shops.",
             web: 'https://www.tiendapoint.com.ar/',
-            webbtn: "fa-solid fa-link",
+            webbtn: "fa-solid fa-arrow-up-right-from-square",
         },
         {
             id: 5,
@@ -80,7 +80,7 @@ function Experience() {
             title: "SCD distributor",
             text: "Mercado Libre: Distributor store edited for Mercado Shops.",
             web: 'https://www.scd-distribuidora.com.ar/',
-            webbtn: "fa-solid fa-link",
+            webbtn: "fa-solid fa-arrow-up-right-from-square",
         },
         {
             id: 6,
@@ -89,7 +89,7 @@ function Experience() {
             title: "Clock UX/UI",
             text: "Modern minimalist style clock with dark/light-mode.",
             web: 'https://nextdoor95.github.io/UX-UI-Clock.github.io/Index.html',
-            webbtn: "fa-solid fa-link",
+            webbtn: "fa-solid fa-arrow-up-right-from-square",
             code: 'https://github.com/NextDoor95/UX-UI-Clock.github.io',
             codebtn: "fa-brands fa-github",
             discord: 'https://discord.gg/resiliente',
@@ -133,7 +133,7 @@ function Experience() {
                                                 src={p.src}
                                                 alt={p.alt}
                                                 height={150}
-                                                width={300}
+                                                width={350}
                                                 className="img"
                                             />
                                         </div>
