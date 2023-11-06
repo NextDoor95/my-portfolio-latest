@@ -106,9 +106,9 @@ function About(props) {
                             <div className="curriculum">
                                 <Link
                                     className="button"
-                                    href="/pdf/FrontendCV.pdf"
+                                    href="/pdf/select-this-Frontend-Dev.pdf"
                                     target='_blank'
-                                    download='frontend-cv.pdf'
+                                    download='select-this-Frontend-Dev.pdf'
                                 >
                                     <div className="bug">
                                         Download CV
