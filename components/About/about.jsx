@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { motion } from "framer-motion";
+
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -49,6 +51,11 @@ function About(props) {
                     />
                 </div>
                 
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 2.5 }}
+                >
                 <div className="glass-wrap">
                     <div className="glassBox">
                         <p className='text'>
@@ -140,6 +147,7 @@ function About(props) {
                         </div>
                     </div>
                 </div>
+                </motion.div>
             </div>
         </section>
     )
