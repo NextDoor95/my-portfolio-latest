@@ -28,10 +28,10 @@ function About(props) {
         {id: 1, src: Javascript, alt: "JavaScript"},
         {id: 2, src: Typescript, alt: "TypeScript"},
         {id: 3, src: Sass, alt: "Sass"},
-        {id: 4, src: Solidity, alt: "Solidity"},
+        {id: 4, src: Git, alt: "Git"},
         {id: 5, src: Reacticon, alt: "React.js"},
         {id: 6, src: Nexticon, alt: "Next.js"},
-        {id: 7, src: Git, alt: "Git"},
+        {id: 7, src: Solidity, alt: "Solidity"},
         {id: 8, src: Hardhat, alt: "Hardhat"}
     ];
 
@@ -50,11 +50,10 @@ function About(props) {
                         className="spline"
                     />
                 </div>
-                
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 2.5 }}
+                    initial={{y: 300, opacity: 0 }}
+                    animate={{y: 0, opacity: 1 }}
+                    transition={{ ease: "easeOut", duration: 1 }}
                 >
                 <div className="glass-wrap">
                     <div className="glassBox">
@@ -92,7 +91,14 @@ function About(props) {
                             >
                                 {logos.map((l) => (
                                     <SwiperSlide key={l.id}>
-                                        <div className="iconstack">
+                                        
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.1 }}
+                                            animate={{ opacity: 1, scale: [1, 1.2, 1] }}
+                                            transition={{ duration: 2.5 }}
+                                        >
+                                            <div className="iconstack">
+
                                             <div className="icon-wrap">
                                                 <Image
                                                     className="iconlogo"
@@ -103,7 +109,9 @@ function About(props) {
                                                 />
                                                 <p>{l.alt}</p>
                                             </div>
-                                        </div>
+                                            </div>
+                                        </motion.div>
+                                        
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
@@ -111,6 +119,10 @@ function About(props) {
                         
                         <div className="footer">
                             <div className="curriculum">
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 1 }}
+                            >
                                 <Link
                                     className="button"
                                     href="/pdf/select-this-Frontend-Dev.pdf"
@@ -122,27 +134,42 @@ function About(props) {
                                     </div>
                                     <i className="fa-solid fa-cloud-arrow-down"></i>
                                 </Link>
+                                </motion.div>
                             </div>
                             <div className="social">
                                 {icons.map((i) => (
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 1 }}
+                                        transition={{ duration: 0.1 }}
+                                        key={i.href}
+                                    >
                                         <Link
                                             className="button"
-                                            key={i.href}
                                             href={i.href}
                                             target='_blank'
                                             rel='noreferrer'
                                             >
+                                                
                                             <i className={i.classname}></i>
+                                            
                                         </Link>
+                                    </motion.div>
                                 ))}
-                                <Link
-                                    href="https://beta.talentprotocol.com/u/nextdoor"
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className="talent-protocol"
-                                            >
-                                        T
-                                </Link>
+                                <motion.div
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 1 }}
+                                    transition={{ duration: 0.1 }}
+                                >
+                                    <Link
+                                        href="https://beta.talentprotocol.com/u/nextdoor"
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        className="talent-protocol"
+                                    >
+                                            T
+                                    </Link>
+                                </motion.div>
                             </div>
                         </div>
                     </div>

@@ -3,6 +3,8 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { motion } from "framer-motion";
+
 import { useState, useEffect } from 'react'
 
 import Whatsapp from '/public/social/WhatsApp.svg'
@@ -35,9 +37,9 @@ function Navbar() {
       }, []);
 
     const links = [
-        {  href: "/#about", classname: "fa-solid fa-house", text: "About" },
-        {  href: "/#experience", classname: "fa-solid fa-brain", text: "Experience" },
-        {  href: "/dev", classname: "fa-solid fa-address-book", text: "Dev-tips!" },
+        {  href: "/#about", classname: "fa-solid fa-house", text: "About", duration: "duration: 1" },
+        {  href: "/#experience", classname: "fa-solid fa-brain", text: "Experience", duration: "duration: 1.5" },
+        {  href: "/dev", classname: "fa-solid fa-address-book", text: "Dev-tips!", duration: "duration: 2" },
     ];
     
     return (
@@ -60,9 +62,16 @@ function Navbar() {
         
         <div className="buttons_mid">
             {links.map((l) => (
-                <Link className="button" key={l.href} href={l.href}>
+                <motion.div
+                    key={l.href}
+                    initial={{y: -20, opacity: 0 }}
+                    animate={{y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                <Link className="button" href={l.href}>
                     <div className='icons-navbar'><i className={l.classname}></i></div><p className="bug">{l.text}</p>
                 </Link>
+                </motion.div>
             ))}
         </div>
 
