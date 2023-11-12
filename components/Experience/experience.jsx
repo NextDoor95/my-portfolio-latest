@@ -5,8 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import Image from 'next/image'
+import { AnimatePresence, motion } from 'framer-motion'
 
+import Image from 'next/image'
 import Link from 'next/link'
 
 import Nof from 'public/experience/nof.png'
@@ -16,7 +17,7 @@ import Wapu from 'public/experience/Wapu.png'
 import Point from 'public/experience/Point.png'
 import Scd from 'public/experience/Scd.png'
 
-function Experience() {
+function Experience({ isVisible }) {
 
     const projects = [
         {
@@ -101,10 +102,18 @@ function Experience() {
 
     return (
     <section className="experience" id="experience">
+        
         <h2 className="title">
             Experience
         </h2>
-
+        <AnimatePresence>
+        {!isVisible && (
+    <motion.div
+        initial={{x: 100, opacity: 0 }}
+        animate={{x: 0, opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+    >
         <div>
                 <div className='slider'>
                     <Swiper
@@ -191,6 +200,9 @@ function Experience() {
                     </Swiper>
                 </div>
         </div>
+        </motion.div>
+        )}
+        </AnimatePresence>
     </section>
     )
 }

@@ -59,46 +59,42 @@ function Navbar() {
                 href="/"
             />
         </Link>
-        
-        <div className="buttons_mid">
-            {links.map((l) => (
-                <motion.div
-                    key={l.href}
+        <motion.div
                     initial={{y: -20, opacity: 0 }}
                     animate={{y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                <Link className="button" href={l.href}>
+        <div className="buttons_mid">
+            {links.map((l) => (
+                
+                <Link className="button" key={l.href} href={l.href}>
                     <div className='icons-navbar'><i className={l.classname}></i></div><p className="bug">{l.text}</p>
                 </Link>
-                </motion.div>
+                
             ))}
         </div>
-
+        </motion.div>
         <div className="buttons_corner">
             {windowSize.width <= 900 ? (
-                
-                <Link className="whatsapp-mobile" rel='noreferrer' href="/">
+                <Link className="whatsapp-mobile" href="https://wa.me/message/KB2WNBOZ7QDKD1" target="_blank" rel='noreferrer'>
                     <Image
                         src={Whatsapp}
-                        alt="Resilientes-logo"
+                        alt="Whatsapp"
                         width="auto"
                         height={35}
                         className='image'
-                        href="https://twitter.com/Resilientes_W3"
                     /> 
                 </Link>
                 ) : (
-                <Link className="greenbtn" href="https://wa.me/message/5F7KIECVDD3NI1" target="_blank" rel='noreferrer'>
+                <Link className="greenbtn" href="https://wa.me/message/KB2WNBOZ7QDKD1" target="_blank" rel='noreferrer'>
                     <Image
                         src={Whatsapp}
-                        alt="Resilientes-logo"
+                        alt="Whatsapp"
                         width="auto"
                         height={25}
                         className='image'
-                        href="https://twitter.com/Resilientes_W3"
                     />
-                    <div className="chat">Lets chat!</div>
+                    <p className="chat">Lets chat!</p>
                 </Link>
             )}
         </div>

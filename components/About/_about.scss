@@ -12,11 +12,13 @@
         text-align: center;
         
         .spline-wrap {
-            z-index: -99;
+            z-index: 99;
             .spline {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                width: 800px;
+                height: 400px;
             }
         }
         

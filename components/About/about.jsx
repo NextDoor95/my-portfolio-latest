@@ -46,13 +46,13 @@ function About(props) {
             <div className="profile">
                 <div className="spline-wrap">
                     <Spline
-                        scene="https://draft.spline.design/n2cho1B-rb-ecbcd/scene.splinecode"
+                        scene="https://prod.spline.design/FkCnR-woTDV7Dcn4/scene.splinecode"
                         className="spline"
                     />
                 </div>
                 <motion.div
-                    initial={{y: 300, opacity: 0 }}
-                    animate={{y: 0, opacity: 1 }}
+                    initial={{ opacity: 0.5 }}
+                    animate={{ opacity: 1 }}
                     transition={{ ease: "easeOut", duration: 1 }}
                 >
                 <div className="glass-wrap">
@@ -88,6 +88,7 @@ function About(props) {
                                     1324: { slidesPerView: 5 },
                                 }}
                                 loop
+                                grabCursor
                             >
                                 {logos.map((l) => (
                                     <SwiperSlide key={l.id}>
